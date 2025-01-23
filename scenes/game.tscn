@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7kkvjhgeqtwr"]
+[gd_scene load_steps=6 format=3 uid="uid://b7kkvjhgeqtwr"]
 
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_7y820"]
 [ext_resource type="PackedScene" uid="uid://bnooendr4711l" path="res://scenes/player.tscn" id="1_dhjma"]
 [ext_resource type="Texture2D" uid="uid://sqha2xvicgg1" path="res://assets/sprites/Terrain.png" id="2_ocntt"]
 
@@ -188,6 +189,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_433ma")
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_7y820")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_dhjma")]
 position = Vector2(157, 250)
