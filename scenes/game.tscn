@@ -189,10 +189,11 @@ sources/0 = SubResource("TileSetAtlasSource_433ma")
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_dhjma")]
 position = Vector2(82, 113)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(-82, -113)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_66glb")
