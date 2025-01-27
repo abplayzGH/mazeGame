@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bnooendr4711l"]
+[gd_scene load_steps=18 format=3 uid="uid://bnooendr4711l"]
 
 [ext_resource type="Script" path="res://scripts/movement.gd" id="1_u4hyw"]
 [ext_resource type="Texture2D" uid="uid://bfi7nfrln38nc" path="res://assets/sprites/PlayerIdle.png" id="2_b7jkb"]
@@ -90,6 +90,11 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_17axg"]
 
+[sub_resource type="Gradient" id="Gradient_gyqmn"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_q1ipw"]
+gradient = SubResource("Gradient_gyqmn")
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_u4hyw")
 
@@ -101,3 +106,10 @@ frame_progress = 0.236254
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 7)
 shape = SubResource("CircleShape2D_17axg")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(20, 6.4)
+scale = Vector2(0.238281, 28.5294)
+energy = 1.5
+texture = SubResource("GradientTexture1D_q1ipw")
+texture_scale = 1.36
