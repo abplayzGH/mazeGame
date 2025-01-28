@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
-@onready var point_light_2d: PointLight2D = $PointLight2D
+@onready var pointLight: PointLight2D = $PointLight2D
 
 
 const SPEED = 300.0
@@ -26,16 +26,11 @@ func _physics_process(_delta: float) -> void:
 		
 	if velocity.x < 0:
 		sprite_2d.flip_h = true
-		point_light_2d.rotation_degrees = 180
+	
+	
 	elif velocity.x > 0:
 		sprite_2d.flip_h = false
-		point_light_2d.rotation_degrees = 0
-		
-	if velocity.y < 0:
-		point_light_2d.rotation_degrees = 270
-	elif velocity.y > 0:
-		point_light_2d.rotation_degrees = 90
-		
+	
 		
 	
 	move_and_slide()

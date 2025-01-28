@@ -90,10 +90,16 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_17axg"]
 
-[sub_resource type="Gradient" id="Gradient_gyqmn"]
+[sub_resource type="Gradient" id="Gradient_a244p"]
+offsets = PackedFloat32Array(0.209821, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_q1ipw"]
-gradient = SubResource("Gradient_gyqmn")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6bqen"]
+gradient = SubResource("Gradient_a244p")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.2, 0.2)
+metadata/_snap_enabled = true
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_u4hyw")
@@ -108,8 +114,6 @@ position = Vector2(0, 7)
 shape = SubResource("CircleShape2D_17axg")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(1.90735e-06, 7)
-scale = Vector2(0.238281, 28.5294)
-energy = 1.5
-texture = SubResource("GradientTexture1D_q1ipw")
-texture_scale = 1.36
+position = Vector2(0, 6)
+scale = Vector2(2, 2)
+texture = SubResource("GradientTexture2D_6bqen")
