@@ -28,6 +28,28 @@ func _process(delta: float) -> void:
 	  #ii. Remove the wall between the current cell and the chosen neighbor.
 	  #iii. Push the current cell onto the stack.
 	  #iv. Move to the neighbor (push it onto the stack).
+func is_within_bounds(cell: Vector2i) -> bool:
+	var WINDOW_SIZE = window.size
+	var tile_count = WINDOW_SIZE / 32
+	return cell.x > 0 and cell.x < tile_count[0] - 1 and cell.y > 0 and cell.y < tile_count[1] - 1
+	
+func check_neighbors(visted: Array[Vector2i], current, neighbors):
+		var left: Vector2i = Vector2i(current[0] - 1, current[1])
+		var right: Vector2i = Vector2i(current[0] + 1, current[1])
+		var up: Vector2i = Vector2i(current[0], current[1] + 1)
+		var down: Vector2i = Vector2i(current[0], current[1] - 1)
+		
+		
+		if left not in visted and is_within_bounds(left):
+			neighbors.append(Vector2i(-1, 0))
+		if right not in visted and is_within_bounds(right):
+			neighbors.append(Vector2i(1, 0))
+		if up not in visted and is_within_bounds(up):
+			neighbors.append(Vector2i(0, 1))
+		if down not in visted and is_within_bounds(down):
+			neighbors.append(Vector2i(0, -1))
+			
+
 
 func mazeGenerate() -> void:
 	
@@ -47,42 +69,31 @@ func mazeGenerate() -> void:
 	while stack.size() != 0:
 		print("Stack ", stack)
 		var neighbors: Array[Vector2i]
-		var current = stack.pop_front()
+		var current = stack[-1]
 		
 		visted.append(current)
 		
-		print("Visted ", visted)
+		#print("Visted ", visted)
 		print("Current ", current)
 		
-		var left: Vector2i = Vector2i(current[0] - 1, current[1])
-		var right: Vector2i = Vector2i(current[0] + 1, current[1])
-		var up: Vector2i = Vector2i(current[0], current[1] + 1)
-		var down: Vector2i = Vector2i(current[0], current[1] - 1)
 		
-		if left not in visted:
-			neighbors.append(left)
-		if right not in visted:
-			neighbors.append(right)
-		if up not in visted:
-			neighbors.append(up)
-		if down not in visted:
-			neighbors.append(down)
+		check_neighbors(visted, current, neighbors)
 		
 		print("neighbors ", neighbors)
 		
-		if neighbors.size() != 0:
-			var next: Vector2i = neighbors[rng.randi_range(0, neighbors.size()-1)]
-			set_cell(0, next, 0, Vector2i(8,0))
+		if neighbors.size() > 0:
+			var dir = neighbors[rng.randi_range(0, neighbors.size()-1)]
+			var next: Vector2i = current + dir
+			set_cell(0, next, 0, Vector2i(1+dir[0],5+dir[0]))
 			stack.append(next)
 		else:
-			print("Done?")
+			stack.pop_back()
+
+						
 			
 			
-func is_within_bounds(cell: Vector2i) -> bool:
-	var WINDOW_SIZE = window.size
-	var tile_count = WINDOW_SIZE / 32
-	return cell.x > 0 and cell.x < tile_count[0] - 1 and cell.y > 0 and cell.y < tile_count[1] - 1
-	
+			
+			
 	
 	
 	
