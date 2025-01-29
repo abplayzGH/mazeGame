@@ -75,7 +75,7 @@ func mazeGenerate() -> void:
 			set_cell(0, next, 0, Vector2i(8,0))
 			stack.append(next)
 		else:
-			print("Done? ")
+			print("Done?")
 			
 			
 func is_within_bounds(cell: Vector2i) -> bool:
