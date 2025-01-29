@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://b7kkvjhgeqtwr"]
 
-[ext_resource type="Script" path="res://scenes/game.gd" id="1_7y820"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_7y820"]
 [ext_resource type="PackedScene" uid="uid://bnooendr4711l" path="res://scenes/player.tscn" id="1_dhjma"]
 [ext_resource type="Texture2D" uid="uid://sqha2xvicgg1" path="res://assets/sprites/Terrain.png" id="2_ocntt"]
-[ext_resource type="Script" path="res://scenes/tile_map.gd" id="3_oocxk"]
+[ext_resource type="Script" path="res://scripts/tile_map.gd" id="3_oocxk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_433ma"]
 texture = ExtResource("2_ocntt")
