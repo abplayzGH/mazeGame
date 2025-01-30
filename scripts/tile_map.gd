@@ -8,7 +8,7 @@ func _ready() -> void:
 	var tile_count = WINDOW_SIZE / 32
 	for x in tile_count[0]:
 		for y in tile_count[1]:
-			set_cell(0, Vector2i(x, y), 0, Vector2i(6,5))
+			set_cell(0, Vector2i(x, y), 0, Vector2i(1,1))
 	mazeGenerate()
 
 
@@ -67,24 +67,25 @@ func mazeGenerate() -> void:
 	stack.append(startingTile)
 	
 	while stack.size() != 0:
-		print("Stack ", stack)
+		#print("Stack ", stack)
 		var neighbors: Array[Vector2i]
 		var current = stack[-1]
 		
 		visted.append(current)
 		
 		#print("Visted ", visted)
-		print("Current ", current)
+		#print("Current ", current)
 		
 		
 		check_neighbors(visted, current, neighbors)
 		
-		print("neighbors ", neighbors)
-		
+		#print("neighbors ", neighbors)
+		#print(Vector2i(1,5) - Vector2i(-1, 0))
 		if neighbors.size() > 0:
 			var dir = neighbors[rng.randi_range(0, neighbors.size()-1)]
 			var next: Vector2i = current + dir
-			set_cell(0, next, 0, Vector2i(1+dir[0],5+dir[0]))
+			set_cell(0, next, 0, Vector2i(1+dir[0],1+dir[1]))
+			
 			stack.append(next)
 		else:
 			stack.pop_back()
