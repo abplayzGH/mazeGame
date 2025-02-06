@@ -1,19 +1,24 @@
-[gd_scene load_steps=11 format=3 uid="uid://b7kkvjhgeqtwr"]
+[gd_scene load_steps=12 format=3 uid="uid://b7kkvjhgeqtwr"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_7y820"]
 [ext_resource type="PackedScene" uid="uid://bnooendr4711l" path="res://scenes/player.tscn" id="1_dhjma"]
 [ext_resource type="Texture2D" uid="uid://c22t2ll7a3c6s" path="res://assets/sprites/sd.png" id="2_61j26"]
 [ext_resource type="Script" path="res://scripts/tile_map.gd" id="3_oocxk"]
 [ext_resource type="Script" path="res://scripts/movement2.gd" id="5_hllcp"]
-[ext_resource type="PackedScene" uid="uid://ct05f6q0q7g0g" path="res://scenes/killzone.tscn" id="5_jpouf"]
+[ext_resource type="Script" path="res://scripts/movement3.gd" id="6_cghig"]
 [ext_resource type="PackedScene" uid="uid://nesqmfly3y8u" path="res://titleScreen.tscn" id="6_f77n4"]
+[ext_resource type="Script" path="res://scripts/movement4.gd" id="7_smjfx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s57tv"]
 texture = ExtResource("2_61j26")
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6, -8, -8, 8, -8, 8, -6)
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -6.125, -8, -6.0988, 8, -8, 8)
 2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 6.125, 8, 5.875, -8, 8, -8)
 1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 6, 8, 8, -8, 8, -8, 6.125)
 1:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_cfteu"]
@@ -21,8 +26,8 @@ occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_s57tv")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ye0js"]
-size = Vector2(28, 30)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5d8hr"]
+size = Vector2(21, 28)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_7y820")
@@ -53,20 +58,28 @@ script = ExtResource("3_oocxk")
 [node name="Player1" parent="." instance=ExtResource("1_dhjma")]
 position = Vector2(34, 28)
 
-[node name="Killzone" parent="Player1" instance=ExtResource("5_jpouf")]
-position = Vector2(99, 57)
-script = null
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player1/Killzone"]
-position = Vector2(-100, -53)
-shape = SubResource("RectangleShape2D_ye0js")
-
 [node name="Player2" parent="." instance=ExtResource("1_dhjma")]
 position = Vector2(1096, 40)
 script = ExtResource("5_hllcp")
+
+[node name="Player3" parent="." instance=ExtResource("1_dhjma")]
+position = Vector2(88, 553)
+script = ExtResource("6_cghig")
+
+[node name="Player4" parent="." instance=ExtResource("1_dhjma")]
+position = Vector2(1109, 546)
+script = ExtResource("7_smjfx")
+
+[node name="Area2D" type="Area2D" parent="Player4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player4/Area2D"]
+position = Vector2(0.5, 4)
+shape = SubResource("RectangleShape2D_5d8hr")
 
 [node name="MainMenu" parent="." instance=ExtResource("6_f77n4")]
 offset_left = -1289.0
 offset_top = 349.0
 offset_right = -1249.0
 offset_bottom = 389.0
+
+[connection signal="body_entered" from="Player4/Area2D" to="Player4" method="_on_area_2d_body_entered"]
