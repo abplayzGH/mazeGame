@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b7kkvjhgeqtwr"]
+[gd_scene load_steps=11 format=3 uid="uid://b7kkvjhgeqtwr"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_7y820"]
 [ext_resource type="PackedScene" uid="uid://bnooendr4711l" path="res://scenes/player.tscn" id="1_dhjma"]
@@ -6,40 +6,20 @@
 [ext_resource type="Script" path="res://scripts/tile_map.gd" id="3_oocxk"]
 [ext_resource type="Script" path="res://scripts/movement2.gd" id="5_hllcp"]
 [ext_resource type="PackedScene" uid="uid://ct05f6q0q7g0g" path="res://scenes/killzone.tscn" id="5_jpouf"]
-[ext_resource type="PackedScene" path="res://titleScreen.tscn" id="6_f77n4"]
+[ext_resource type="PackedScene" uid="uid://nesqmfly3y8u" path="res://titleScreen.tscn" id="6_f77n4"]
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kx2rp"]
-polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qntbd"]
-polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_n63qh"]
-polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_sr44c"]
-polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sjp0w"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s57tv"]
 texture = ExtResource("2_61j26")
 1:0/0 = 0
-1:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_qntbd")
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, -6.125, 8, -8, -8, -8, -8, -6.125, -8, -6)
 0:1/0 = 0
-0:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_kx2rp")
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6, -8, -8, -8, -8, 8, -5.75, 8, -6, 8)
 2:1/0 = 0
-2:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_sr44c")
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(6, 8, 8, 8, 8, -8, 5.75, -8, 6, -8)
 1:2/0 = 0
-1:2/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_n63qh")
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 6, -8, 8, 8, 8, 8, 5.75, 8, 6)
 1:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_cfteu"]
 occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_sjp0w")
+sources/0 = SubResource("TileSetAtlasSource_s57tv")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ye0js"]
 size = Vector2(28, 30)
@@ -57,6 +37,7 @@ size_flags_vertical = 0
 color = Color(0, 0, 0, 1)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 position = Vector2(0, -1)
 scale = Vector2(3, 3)
 color = Color(0, 0, 0, 1)
@@ -66,21 +47,22 @@ position = Vector2(-50, -47)
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_cfteu")
 format = 2
-layer_0/tile_data = PackedInt32Array(589830, 65536, 0, 262151, 0, 1, 196610, 65536, 2, 524289, 131072, 1, 262146, 65536, 1, 327682, 65536, 1, 327683, 65536, 1, 393219, 65536, 1, 393220, 65536, 1, 458756, 65536, 1, 458757, 65536, 1, 262147, 65536, 1, 262148, 65536, 1, 262149, 65536, 1, 262150, 65536, 1, 327686, 65536, 1, 393222, 65536, 1, 458758, 65536, 1, 524294, 65536, 1, 524293, 65536, 1, 524292, 65536, 1, 524291, 65536, 1, 458755, 65536, 1, 458754, 65536, 1, 393218, 65536, 1, 524290, 65536, 1, 393221, 65536, 1, 327685, 65536, 1, 327684, 65536, 1)
+layer_0/tile_data = PackedInt32Array(589830, 65536, 0, 262151, 0, 1, 196610, 65536, 2, 524289, 131072, 1, 262146, 65536, 1, 327682, 65536, 1, 327683, 65536, 1, 393219, 65536, 1, 393220, 65536, 1, 458756, 65536, 1, 458757, 65536, 1, 262147, 65536, 1, 262148, 65536, 1, 262149, 65536, 1, 262150, 65536, 1, 327686, 65536, 1, 393222, 65536, 1, 458758, 65536, 1, 524294, 65536, 1, 524293, 65536, 1, 524292, 65536, 1, 524291, 65536, 1, 458755, 65536, 1, 458754, 65536, 1, 393218, 65536, 1, 524290, 65536, 1, 393221, 65536, 1, 327685, 65536, 1, 327684, 65536, 1, 131082, 65537, 0, 131083, 65537, 0, 131084, 1, 1, 196620, 65537, 2, 262156, 65537, 0)
 script = ExtResource("3_oocxk")
 
 [node name="Player1" parent="." instance=ExtResource("1_dhjma")]
-position = Vector2(83, 155)
+position = Vector2(34, 28)
 
 [node name="Killzone" parent="Player1" instance=ExtResource("5_jpouf")]
+position = Vector2(99, 57)
 script = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player1/Killzone"]
-position = Vector2(0, 5)
+position = Vector2(-100, -53)
 shape = SubResource("RectangleShape2D_ye0js")
 
 [node name="Player2" parent="." instance=ExtResource("1_dhjma")]
-position = Vector2(52, 148)
+position = Vector2(1096, 40)
 script = ExtResource("5_hllcp")
 
 [node name="MainMenu" parent="." instance=ExtResource("6_f77n4")]

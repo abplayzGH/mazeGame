@@ -12,9 +12,7 @@ func _ready() -> void:
 	mazeGenerate()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+# Called every frame. 'delta' is the elapsed time since the previous frame
 
 
 #1. Create a grid of cells, with walls between each cell.
