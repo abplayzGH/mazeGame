@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://nesqmfly3y8u"]
+
+[ext_resource type="Script" path="res://scenes/titleScreen.gd" id="1_5f3ai"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_5f3ai")
+
+[node name="startButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 308.0
+offset_top = 191.0
+offset_right = 437.0
+offset_bottom = 258.0
+text = "start"

@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://b7kkvjhgeqtwr"]
+[gd_scene load_steps=13 format=3 uid="uid://b7kkvjhgeqtwr"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_7y820"]
 [ext_resource type="PackedScene" uid="uid://bnooendr4711l" path="res://scenes/player.tscn" id="1_dhjma"]
 [ext_resource type="Texture2D" uid="uid://c22t2ll7a3c6s" path="res://assets/sprites/sd.png" id="2_61j26"]
 [ext_resource type="Script" path="res://scripts/tile_map.gd" id="3_oocxk"]
 [ext_resource type="Script" path="res://scripts/movement2.gd" id="5_hllcp"]
+[ext_resource type="PackedScene" uid="uid://nesqmfly3y8u" path="res://titleScreen.tscn" id="6_f77n4"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kx2rp"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -42,14 +43,6 @@ sources/0 = SubResource("TileSetAtlasSource_sjp0w")
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_7y820")
 
-[node name="TileMap" type="TileMap" parent="."]
-position = Vector2(-50, -47)
-scale = Vector2(3, 3)
-tile_set = SubResource("TileSet_cfteu")
-format = 2
-layer_0/tile_data = PackedInt32Array(589830, 65536, 0, 262151, 0, 1, 196610, 65536, 2, 524289, 131072, 1, 262146, 65536, 1, 327682, 65536, 1, 327683, 65536, 1, 393219, 65536, 1, 393220, 65536, 1, 458756, 65536, 1, 458757, 65536, 1, 262147, 65536, 1, 262148, 65536, 1, 262149, 65536, 1, 262150, 65536, 1, 327686, 65536, 1, 393222, 65536, 1, 458758, 65536, 1, 524294, 65536, 1, 524293, 65536, 1, 524292, 65536, 1, 524291, 65536, 1, 458755, 65536, 1, 458754, 65536, 1, 393218, 65536, 1, 524290, 65536, 1, 393221, 65536, 1, 327685, 65536, 1, 327684, 65536, 1)
-script = ExtResource("3_oocxk")
-
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
 z_index = -1
@@ -59,14 +52,24 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 color = Color(0, 0, 0, 1)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_dhjma")]
-position = Vector2(131, 239)
-
-[node name="CharacterBody2D2" parent="." instance=ExtResource("1_dhjma")]
-position = Vector2(188, 246)
-script = ExtResource("5_hllcp")
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-position = Vector2(-50, -47)
+position = Vector2(0, -1)
 scale = Vector2(3, 3)
 color = Color(0, 0, 0, 1)
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-50, -47)
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_cfteu")
+format = 2
+layer_0/tile_data = PackedInt32Array(589830, 65536, 0, 262151, 0, 1, 196610, 65536, 2, 524289, 131072, 1, 262146, 65536, 1, 327682, 65536, 1, 327683, 65536, 1, 393219, 65536, 1, 393220, 65536, 1, 458756, 65536, 1, 458757, 65536, 1, 262147, 65536, 1, 262148, 65536, 1, 262149, 65536, 1, 262150, 65536, 1, 327686, 65536, 1, 393222, 65536, 1, 458758, 65536, 1, 524294, 65536, 1, 524293, 65536, 1, 524292, 65536, 1, 524291, 65536, 1, 458755, 65536, 1, 458754, 65536, 1, 393218, 65536, 1, 524290, 65536, 1, 393221, 65536, 1, 327685, 65536, 1, 327684, 65536, 1)
+script = ExtResource("3_oocxk")
+
+[node name="Player1" parent="." instance=ExtResource("1_dhjma")]
+position = Vector2(83, 155)
+
+[node name="Player2" parent="." instance=ExtResource("1_dhjma")]
+position = Vector2(52, 148)
+script = ExtResource("5_hllcp")
+
+[node name="MainMenu" parent="." instance=ExtResource("6_f77n4")]
