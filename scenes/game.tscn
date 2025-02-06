@@ -44,7 +44,6 @@ sources/0 = SubResource("TileSetAtlasSource_sjp0w")
 script = ExtResource("1_7y820")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 z_index = -1
 offset_right = 1200.0
 offset_bottom = 671.0
@@ -73,3 +72,7 @@ position = Vector2(52, 148)
 script = ExtResource("5_hllcp")
 
 [node name="MainMenu" parent="." instance=ExtResource("6_f77n4")]
+offset_left = -1289.0
+offset_top = 349.0
+offset_right = -1249.0
+offset_bottom = 389.0
