@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c22t2ll7a3c6s" path="res://assets/sprites/sd.png" id="2_61j26"]
 [ext_resource type="Script" path="res://scripts/tile_map.gd" id="3_oocxk"]
 [ext_resource type="Script" path="res://scripts/movement2.gd" id="5_hllcp"]
-[ext_resource type="PackedScene" uid="uid://nesqmfly3y8u" path="res://titleScreen.tscn" id="6_f77n4"]
+[ext_resource type="PackedScene" path="res://titleScreen.tscn" id="6_f77n4"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kx2rp"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
