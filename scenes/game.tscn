@@ -2,32 +2,27 @@
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_7y820"]
 [ext_resource type="PackedScene" uid="uid://bnooendr4711l" path="res://scenes/player.tscn" id="1_dhjma"]
-[ext_resource type="Texture2D" uid="uid://c22t2ll7a3c6s" path="res://assets/sprites/sd.png" id="2_61j26"]
+[ext_resource type="Texture2D" uid="uid://c22t2ll7a3c6s" path="res://assets/sprites/sd.png" id="2_qbg8g"]
 [ext_resource type="Script" path="res://scripts/tile_map.gd" id="3_oocxk"]
 [ext_resource type="Script" path="res://scripts/movement2.gd" id="5_hllcp"]
 [ext_resource type="Script" path="res://scripts/movement3.gd" id="6_cghig"]
-[ext_resource type="PackedScene" uid="uid://nesqmfly3y8u" path="res://titleScreen.tscn" id="6_f77n4"]
+[ext_resource type="PackedScene" path="res://titleScreen.tscn" id="6_f77n4"]
 [ext_resource type="Script" path="res://scripts/movement4.gd" id="7_smjfx"]
-[ext_resource type="PackedScene" uid="uid://d0xkjmis6r5aa" path="res://scenes/collectible.tscn" id="8_4w3y2"]
+[ext_resource type="PackedScene" path="res://scenes/collectible.tscn" id="8_4w3y2"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s57tv"]
-texture = ExtResource("2_61j26")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5sagt"]
+texture = ExtResource("2_qbg8g")
 1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6, -8, -8, 8, -8, 8, -6)
 0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -6, -8, -5.875, 8, -8, 8)
 2:1/0 = 0
-2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 6.125, 8, 5.875, -8, 8, -8)
-1:2/0 = 0
-1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 6, 8, 8, -8, 8, -8, 6.125)
-1:1/0 = 0
 0:2/0 = 0
-0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_cfteu"]
 occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_s57tv")
+sources/0 = SubResource("TileSetAtlasSource_5sagt")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ykfu8"]
 radius = 17.0
