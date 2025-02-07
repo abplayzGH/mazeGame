@@ -26,7 +26,7 @@ func _on_timer_timeout():
 	update_label()
 	
 	if time_left <= 0:
-		reset_game()
+		get_tree().change_scene_to_file("res://titleScreen.tscn")
 
 func update_label():
 	label.text = "Time left: " + str(time_left)
