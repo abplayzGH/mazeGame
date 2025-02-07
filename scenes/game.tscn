@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://scripts/movement2.gd" id="5_hllcp"]
 [ext_resource type="Script" path="res://scripts/movement3.gd" id="6_cghig"]
 [ext_resource type="Script" path="res://scripts/movement4.gd" id="7_smjfx"]
-[ext_resource type="PackedScene" path="res://scenes/collectible.tscn" id="8_4w3y2"]
+[ext_resource type="PackedScene" uid="uid://d0xkjmis6r5aa" path="res://scenes/collectible.tscn" id="8_4w3y2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5sagt"]
 texture = ExtResource("2_qbg8g")
