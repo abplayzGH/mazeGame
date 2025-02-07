@@ -33,14 +33,12 @@ offset_right = 623.0
 offset_bottom = 354.0
 text = "4 Players"
 
-[node name="TextEdit" type="RichTextLabel" parent="."]
+[node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 437.0
-offset_top = 170.0
-offset_right = 556.0
-offset_bottom = 203.0
-scale = Vector2(2, 2)
-theme_override_font_sizes/normal_font_size = 20
+offset_left = 511.0
+offset_top = 163.0
+offset_right = 611.0
+offset_bottom = 200.0
 text = "Maze Game"
 
 [connection signal="pressed" from="2PlayerStart" to="." method="_on_player_start_2_pressed"]
