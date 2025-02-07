@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b7kkvjhgeqtwr"]
+[gd_scene load_steps=15 format=3 uid="uid://b7kkvjhgeqtwr"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_7y820"]
 [ext_resource type="PackedScene" uid="uid://bnooendr4711l" path="res://scenes/player.tscn" id="1_dhjma"]
@@ -28,8 +28,13 @@ occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_s57tv")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5d8hr"]
-size = Vector2(21, 28)
+[sub_resource type="CircleShape2D" id="CircleShape2D_ykfu8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4lk4t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hro3x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oe6ue"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_7y820")
@@ -60,13 +65,31 @@ script = ExtResource("3_oocxk")
 [node name="Player1" parent="." instance=ExtResource("1_dhjma")]
 position = Vector2(65, 73)
 
+[node name="Area2D" type="Area2D" parent="Player1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player1/Area2D"]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_ykfu8")
+
 [node name="Player2" parent="." instance=ExtResource("1_dhjma")]
 position = Vector2(1096, 40)
 script = ExtResource("5_hllcp")
 
+[node name="Area2D" type="Area2D" parent="Player2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2/Area2D"]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_4lk4t")
+
 [node name="Player3" parent="." instance=ExtResource("1_dhjma")]
 position = Vector2(88, 553)
 script = ExtResource("6_cghig")
+
+[node name="Area2D" type="Area2D" parent="Player3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player3/Area2D"]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_hro3x")
 
 [node name="Player4" parent="." instance=ExtResource("1_dhjma")]
 position = Vector2(1109, 546)
@@ -75,8 +98,8 @@ script = ExtResource("7_smjfx")
 [node name="Area2D" type="Area2D" parent="Player4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player4/Area2D"]
-position = Vector2(0.5, 4)
-shape = SubResource("RectangleShape2D_5d8hr")
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_oe6ue")
 
 [node name="MainMenu" parent="." instance=ExtResource("6_f77n4")]
 offset_left = -1289.0
