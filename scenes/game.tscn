@@ -29,12 +29,16 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_s57tv")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ykfu8"]
+radius = 17.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4lk4t"]
+radius = 17.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hro3x"]
+radius = 19.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oe6ue"]
+radius = 18.0
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_7y820")
@@ -68,7 +72,7 @@ position = Vector2(65, 73)
 [node name="Area2D" type="Area2D" parent="Player1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player1/Area2D"]
-position = Vector2(0, 7)
+position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_ykfu8")
 
 [node name="Player2" parent="." instance=ExtResource("1_dhjma")]
@@ -115,4 +119,7 @@ offset_top = 6.0
 offset_right = 101.0
 offset_bottom = 29.0
 
-[connection signal="body_entered" from="Player4/Area2D" to="Player4" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Player1/Area2D" to="." method="_on_area_2d_body_entered_1"]
+[connection signal="body_entered" from="Player2/Area2D" to="." method="_on_area_2d_body_entered_2"]
+[connection signal="body_entered" from="Player3/Area2D" to="." method="_on_area_2d_body_entered_3"]
+[connection signal="body_entered" from="Player4/Area2D" to="." method="_on_area_2d_body_entered_4"]

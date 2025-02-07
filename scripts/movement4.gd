@@ -35,13 +35,5 @@ func _physics_process(_delta: float) -> void:
 	
 	move_and_slide()
 
-
-
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name != "Player4" and body.name != "TileMap":
-		print("You died") 
-		print(body)
-		body.position = Vector2(-1000,-1000)
 		
 	
