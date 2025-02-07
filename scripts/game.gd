@@ -5,8 +5,8 @@ extends Node
 
 @onready var player1 = $Player1
 @onready var player2 = $Player2
-@onready var player3 = $Player2
-@onready var player4 = $Player3
+@onready var player3 = $Player3
+@onready var player4 = $Player4
 
 
 var time_left: int = 120  # Set the countdown time in seconds
@@ -43,7 +43,7 @@ func _on_area_2d_body_entered_1(body: Node2D) -> void:
 			print("1 is die")
 			player1.position = Vector2(1000,1000)
 			hunter_score += 1
-		if hunter_score >= 4:
+		if hunter_score >= 3:
 			get_tree().change_scene_to_file("res://scenes/hunterWin.tscn")
 
 func _on_area_2d_body_entered_2(body: Node2D) -> void:
@@ -54,7 +54,7 @@ func _on_area_2d_body_entered_2(body: Node2D) -> void:
 			print("2 is die")
 			player2.position = Vector2(1000,1000)
 			hunter_score += 1
-		if hunter_score >= 4:
+		if hunter_score >= 3:
 			get_tree().change_scene_to_file("res://scenes/hunterWin.tscn")
 
 func _on_area_2d_body_entered_3(body: Node2D) -> void:
@@ -65,7 +65,7 @@ func _on_area_2d_body_entered_3(body: Node2D) -> void:
 			print("3 is die")
 			player3.position = Vector2(1000,1000)
 			hunter_score += 1
-		if hunter_score >= 4:
+		if hunter_score >= 3:
 			get_tree().change_scene_to_file("res://scenes/hunterWin.tscn")
 
 func _on_area_2d_body_entered_4(body: Node2D) -> void:
@@ -76,5 +76,5 @@ func _on_area_2d_body_entered_4(body: Node2D) -> void:
 			print("4 is die")
 			player4.position = Vector2(1000,1000)
 			hunter_score += 1
-		if hunter_score >= 4:
+		if hunter_score >= 3:
 			get_tree().change_scene_to_file("res://scenes/hunterWin.tscn")

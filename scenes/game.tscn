@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b7kkvjhgeqtwr"]
+[gd_scene load_steps=16 format=3 uid="uid://b7kkvjhgeqtwr"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_7y820"]
 [ext_resource type="PackedScene" uid="uid://bnooendr4711l" path="res://scenes/player.tscn" id="1_dhjma"]
@@ -6,17 +6,21 @@
 [ext_resource type="Script" path="res://scripts/tile_map.gd" id="3_oocxk"]
 [ext_resource type="Script" path="res://scripts/movement2.gd" id="5_hllcp"]
 [ext_resource type="Script" path="res://scripts/movement3.gd" id="6_cghig"]
-[ext_resource type="PackedScene" path="res://titleScreen.tscn" id="6_f77n4"]
 [ext_resource type="Script" path="res://scripts/movement4.gd" id="7_smjfx"]
 [ext_resource type="PackedScene" path="res://scenes/collectible.tscn" id="8_4w3y2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5sagt"]
 texture = ExtResource("2_qbg8g")
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6, -8, -8, 8, -8, 8, -6)
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -5.875, -8, -6, 8, -8, 8)
 2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 8, 6.125, 8, 6.125, -8, 8, -8)
 0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
 1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(8, 5.875, 8, 8, -8, 8, -8, 6)
 1:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_cfteu"]
@@ -101,12 +105,6 @@ script = ExtResource("7_smjfx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player4/Area2D"]
 position = Vector2(0, 7)
 shape = SubResource("CircleShape2D_oe6ue")
-
-[node name="MainMenu" parent="." instance=ExtResource("6_f77n4")]
-offset_left = -1289.0
-offset_top = 349.0
-offset_right = -1249.0
-offset_bottom = 389.0
 
 [node name="Timer" type="Timer" parent="."]
 
