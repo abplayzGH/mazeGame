@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [display]
 
 window/stretch/mode="viewport"
+window/defaults/default_clear_color=Color(0.397297, 0.749159, 0.311094, 1)
+window/dynamic_fonts/use_oversampling=false
 
 [editor]
 
@@ -116,3 +118,4 @@ right4={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.397297, 0.749159, 0.311094, 1)

@@ -44,7 +44,7 @@ func _on_area_2d_body_entered_1(body: Node2D) -> void:
 			player1.position = Vector2(1000,1000)
 			hunter_score += 1
 		if hunter_score >= 4:
-			print("Hunter Wins")
+			get_tree().change_scene_to_file("res://scenes/hunterWin.tscn")
 
 func _on_area_2d_body_entered_2(body: Node2D) -> void:
 	if hunter == 2:
@@ -55,7 +55,7 @@ func _on_area_2d_body_entered_2(body: Node2D) -> void:
 			player2.position = Vector2(1000,1000)
 			hunter_score += 1
 		if hunter_score >= 4:
-			print("Hunter Wins")
+			get_tree().change_scene_to_file("res://scenes/hunterWin.tscn")
 
 func _on_area_2d_body_entered_3(body: Node2D) -> void:
 	if hunter == 3:
@@ -66,7 +66,7 @@ func _on_area_2d_body_entered_3(body: Node2D) -> void:
 			player3.position = Vector2(1000,1000)
 			hunter_score += 1
 		if hunter_score >= 4:
-			print("Hunter Wins")
+			get_tree().change_scene_to_file("res://scenes/hunterWin.tscn")
 
 func _on_area_2d_body_entered_4(body: Node2D) -> void:
 	if hunter == 4:
@@ -77,4 +77,4 @@ func _on_area_2d_body_entered_4(body: Node2D) -> void:
 			player4.position = Vector2(1000,1000)
 			hunter_score += 1
 		if hunter_score >= 4:
-			print("Hunter Wins")
+			get_tree().change_scene_to_file("res://scenes/hunterWin.tscn")
