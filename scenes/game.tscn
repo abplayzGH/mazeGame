@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://b7kkvjhgeqtwr"]
 
-[ext_resource type="Script" path="res://scripts/game.gd" id="1_7y820"]
 [ext_resource type="PackedScene" uid="uid://bnooendr4711l" path="res://scenes/player.tscn" id="1_dhjma"]
+[ext_resource type="Script" path="res://scripts/game2Players.gd" id="1_lmbwe"]
 [ext_resource type="Texture2D" uid="uid://c22t2ll7a3c6s" path="res://assets/sprites/sd.png" id="2_qbg8g"]
 [ext_resource type="Script" path="res://scripts/tile_map.gd" id="3_oocxk"]
 [ext_resource type="Script" path="res://scripts/movement2.gd" id="5_hllcp"]
@@ -36,7 +36,7 @@ radius = 17.0
 font_size = 20
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_7y820")
+script = ExtResource("1_lmbwe")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
