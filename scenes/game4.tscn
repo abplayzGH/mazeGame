@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ffsgqlmjdrys"]
+[gd_scene load_steps=17 format=3 uid="uid://ffsgqlmjdrys"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_dtmek"]
 [ext_resource type="Texture2D" uid="uid://c22t2ll7a3c6s" path="res://assets/sprites/sd.png" id="2_1h0e6"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scripts/movement3.gd" id="6_oum62"]
 [ext_resource type="Script" path="res://scripts/movement4.gd" id="7_16woi"]
 [ext_resource type="PackedScene" uid="uid://d0xkjmis6r5aa" path="res://scenes/collectible.tscn" id="8_8oxye"]
+[ext_resource type="Material" uid="uid://cxbgcuae7np33" path="res://assets/sprites/showTimer.tres" id="8_80j8r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5sagt"]
 texture = ExtResource("2_1h0e6")
@@ -109,6 +110,8 @@ shape = SubResource("CircleShape2D_oe6ue")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Label" type="Label" parent="."]
+top_level = true
+material = ExtResource("8_80j8r")
 offset_left = 15.0
 offset_top = 15.0
 offset_right = 115.0
