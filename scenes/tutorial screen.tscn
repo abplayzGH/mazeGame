@@ -145,10 +145,10 @@ text = "'"
 [node name="Label" type="Label" parent="."]
 offset_left = 96.0
 offset_top = 244.0
-offset_right = 576.0
+offset_right = 580.0
 offset_bottom = 267.0
 scale = Vector2(2, 2)
-text = " Player1 Player2 Player3 Player4  "
+text = " Player1 Player2 Player3 Player4"
 horizontal_alignment = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
