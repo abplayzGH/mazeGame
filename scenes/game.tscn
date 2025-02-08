@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://c22t2ll7a3c6s" path="res://assets/sprites/sd.png" id="2_qbg8g"]
 [ext_resource type="Script" path="res://scripts/tile_map.gd" id="3_oocxk"]
 [ext_resource type="Script" path="res://scripts/movement2.gd" id="5_hllcp"]
-[ext_resource type="Material" uid="uid://cxbgcuae7np33" path="res://assets/sprites/showTimer.tres" id="6_7eb0h"]
-[ext_resource type="PackedScene" uid="uid://d0xkjmis6r5aa" path="res://scenes/collectible.tscn" id="8_4w3y2"]
+[ext_resource type="Material" path="res://assets/sprites/showTimer.tres" id="6_7eb0h"]
+[ext_resource type="PackedScene" path="res://scenes/collectible.tscn" id="8_4w3y2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5sagt"]
 texture = ExtResource("2_qbg8g")

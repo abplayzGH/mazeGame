@@ -9,7 +9,7 @@ extends Node
 @onready var player4 = $Player4
 
 
-var time_left: int = 180  # Set the countdown time in seconds
+var time_left: int = 120  # Set the countdown time in seconds
 var rng = RandomNumberGenerator.new()
 var hunter = rng.randi_range(1, 4)
 var hunter_score: int = 0

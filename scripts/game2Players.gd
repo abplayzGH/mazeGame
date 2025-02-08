@@ -8,7 +8,7 @@ extends Node
 
 
 
-var time_left: int = 120  # Set the countdown time in seconds
+var time_left: int = 60  # Set the countdown time in seconds
 var rng = RandomNumberGenerator.new()
 var hunter = rng.randi_range(1, 2)
 var hunter_score: int = 0
