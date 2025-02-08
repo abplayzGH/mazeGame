@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ffsgqlmjdrys"]
+[gd_scene load_steps=17 format=3 uid="uid://ccfvotsviifnn"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_dtmek"]
 [ext_resource type="Texture2D" uid="uid://c22t2ll7a3c6s" path="res://assets/sprites/sd.png" id="2_1h0e6"]
@@ -7,8 +7,8 @@
 [ext_resource type="Script" path="res://scripts/movement2.gd" id="5_3a4fx"]
 [ext_resource type="Script" path="res://scripts/movement3.gd" id="6_oum62"]
 [ext_resource type="Script" path="res://scripts/movement4.gd" id="7_16woi"]
-[ext_resource type="PackedScene" uid="uid://d0xkjmis6r5aa" path="res://scenes/collectible.tscn" id="8_8oxye"]
-[ext_resource type="Material" uid="uid://cxbgcuae7np33" path="res://assets/sprites/showTimer.tres" id="8_80j8r"]
+[ext_resource type="PackedScene" path="res://scenes/collectible.tscn" id="8_8oxye"]
+[ext_resource type="Material" path="res://assets/sprites/showTimer.tres" id="8_80j8r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5sagt"]
 texture = ExtResource("2_1h0e6")

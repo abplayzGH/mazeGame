@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://fjau63wsfmn"]
+[gd_scene load_steps=3 format=3 uid="uid://bmg77cqby0f4g"]
 
 [ext_resource type="Script" path="res://restart.gd" id="1_has5j"]
 
@@ -9,18 +9,18 @@ font_size = 80
 script = ExtResource("1_has5j")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 270.0
-offset_top = 200.0
-offset_right = 770.0
-offset_bottom = 310.0
+offset_left = 324.0
+offset_top = 196.0
+offset_right = 824.0
+offset_bottom = 306.0
 text = "Players Win!"
 label_settings = SubResource("LabelSettings_un6pg")
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
-offset_left = 400.0
+offset_left = 469.0
 offset_top = 350.0
-offset_right = 514.0
+offset_right = 583.0
 offset_bottom = 381.0
 scale = Vector2(2, 2)
 text = "Restart Game
