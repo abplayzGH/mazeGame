@@ -37,29 +37,29 @@ func reset_game():
 	
 func _on_area_2d_body_entered_1(body: Node2D) -> void:
 	if hunter == 1:
-		pass
+		player1.sprite_2d.animation = "ghost"
 	else:
 		if body.name == "Player" + str(hunter):
 			print("1 is die")
 			player1.position = Vector2(1000,1000)
 			hunter_score += 1
-		if hunter_score >= 3:
+		if hunter_score >= 4:
 			get_tree().change_scene_to_file("res://scenes/hunterWin.tscn")
 
 func _on_area_2d_body_entered_2(body: Node2D) -> void:
 	if hunter == 2:
-		pass
+		player2.sprite_2d.animation = "ghost"
 	else:
 		if body.name == "Player" + str(hunter) and body.name != "Player2":
 			print("2 is die")
 			player2.position = Vector2(1000,1000)
 			hunter_score += 1
-		if hunter_score >= 3:
+		if hunter_score >= 4:
 			get_tree().change_scene_to_file("res://scenes/hunterWin.tscn")
 
 func _on_area_2d_body_entered_3(body: Node2D) -> void:
 	if hunter == 3:
-		pass
+		player3.sprite_2d.animation = "ghost"
 	else:
 		if body.name == "Player" + str(hunter) and body.name != "Player3":
 			print("3 is die")
@@ -70,7 +70,7 @@ func _on_area_2d_body_entered_3(body: Node2D) -> void:
 
 func _on_area_2d_body_entered_4(body: Node2D) -> void:
 	if hunter == 4:
-		pass
+		player4.sprite_2d.animation = "ghost"
 	else:
 		if body.name == "Player" + str(hunter) and body.name != "Player4":
 			print("4 is die")

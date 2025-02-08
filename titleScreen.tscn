@@ -48,14 +48,23 @@ text = "4 Players"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 405.0
-offset_top = 170.0
-offset_right = 725.0
-offset_bottom = 270.0
-text = "Maze Game"
+offset_left = 326.0
+offset_top = 165.0
+offset_right = 794.0
+offset_bottom = 265.0
+text = "Maze of Shadows"
 label_settings = SubResource("LabelSettings_r33dy")
 horizontal_alignment = 1
+
+[node name="Tutorial" type="Button" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 140.0
+offset_bottom = 84.0
+text = "Tutorial"
 
 [connection signal="pressed" from="2PlayerStart" to="." method="_on_player_start_2_pressed"]
 [connection signal="pressed" from="3PlayerStart" to="." method="_on_player_start_3_pressed"]
 [connection signal="pressed" from="4PlayerStart" to="." method="_on_player_start_4_pressed"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]

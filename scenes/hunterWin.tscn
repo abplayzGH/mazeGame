@@ -13,7 +13,7 @@ offset_left = 265.0
 offset_top = 200.0
 offset_right = 765.0
 offset_bottom = 310.0
-text = "Hunter Wins"
+text = "Ghost Wins!"
 label_settings = SubResource("LabelSettings_un6pg")
 
 [node name="Button" type="Button" parent="."]
