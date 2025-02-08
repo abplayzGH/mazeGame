@@ -145,7 +145,7 @@ text = "'"
 [node name="Label" type="Label" parent="."]
 offset_left = 96.0
 offset_top = 244.0
-offset_right = 653.0
+offset_right = 576.0
 offset_bottom = 267.0
 scale = Vector2(2, 2)
 text = " Player1 Player2 Player3 Player4  "
